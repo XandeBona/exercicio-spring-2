@@ -1,14 +1,12 @@
 package com.concessionaria.lojacarros.controllers;
 
 import com.concessionaria.lojacarros.entities.Vendedor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/vendedores")
@@ -37,6 +35,36 @@ public class VendedoresController {
         for (Vendedor vendedor : lista) {
             if (Objects.equals(vendedor.getId(), idVendedor)) {
                 return vendedor;
+            }
+        }
+        return null;
+    }
+
+    @PostMapping
+    public Vendedor adicionarVendedor(@RequestBody Vendedor vendedor) {
+        vendedor.setId(new Random().nextInt());
+        lista.add(vendedor);
+        return vendedor;
+    }
+
+    @PutMapping("/{idVendedor}")
+    public Vendedor alterarVendedor(@PathVariable Integer idVendedor, @RequestBody Vendedor vendedor) {
+        for (Vendedor vendedorAlterar : lista) {
+            if (vendedorAlterar.getId().equals(idVendedor)) {
+                vendedorAlterar.setNome(vendedor.getNome());
+                vendedorAlterar.setCpf(vendedor.getCpf());
+                return vendedorAlterar;
+            }
+        }
+        return null;
+    }
+
+    @DeleteMapping("/{idVendedor}")
+    public Vendedor deletarVendedor(@PathVariable Integer idVendedor) {
+        for (Vendedor vendedorRemover : lista) {
+            if (vendedorRemover.getId().equals(idVendedor)) {
+                lista.remove(vendedorRemover);
+                return vendedorRemover;
             }
         }
         return null;

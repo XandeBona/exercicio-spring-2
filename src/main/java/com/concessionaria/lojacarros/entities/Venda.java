@@ -22,4 +22,16 @@ public class Venda {
     public String getCarro() {
         return carro;
     }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setVendedor(String vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    public void setCarro(String carro) {
+        this.carro = carro;
+    }
 }

@@ -28,4 +28,20 @@ public class Carro {
     public String getMarca() {
         return marca;
     }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public void setAno(Integer ano) {
+        this.ano = ano;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
 }

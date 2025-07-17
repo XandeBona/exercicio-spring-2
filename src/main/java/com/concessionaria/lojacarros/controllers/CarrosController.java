@@ -1,14 +1,12 @@
 package com.concessionaria.lojacarros.controllers;
 
 import com.concessionaria.lojacarros.entities.Carro;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/carros")
@@ -37,6 +35,37 @@ public class CarrosController {
         for (Carro carro : lista) {
             if (Objects.equals(carro.getId(), idCarro)) {
                 return carro;
+            }
+        }
+        return null;
+    }
+
+    @PostMapping
+    public Carro adicionarCarro(@RequestBody Carro carro) {
+        carro.setId(new Random().nextInt());
+        lista.add(carro);
+        return carro;
+    }
+
+    @PutMapping("/{idCarro}")
+    public Carro alterarCarro(@PathVariable Integer idCarro, @RequestBody Carro carro) {
+        for(Carro carroAlterar : lista) {
+            if (carroAlterar.getId().equals(idCarro)) {
+                carroAlterar.setPreco(carro.getPreco());
+                carroAlterar.setAno(carro.getAno());
+                carroAlterar.setMarca(carro.getMarca());
+                return carroAlterar;
+            }
+        }
+        return null;
+    }
+
+    @DeleteMapping("/{idCarro}")
+    public Carro deletarCarro(@PathVariable Integer idCarro) {
+        for (Carro carroRemover : lista) {
+            if (carroRemover.getId().equals(idCarro)) {
+                lista.remove(carroRemover);
+                return carroRemover;
             }
         }
         return null;
