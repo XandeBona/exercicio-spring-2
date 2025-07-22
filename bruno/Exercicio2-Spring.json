@@ -1,0 +1,282 @@
+{
+  "name": "Exercicio2-Spring",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Carros DELETE",
+      "filename": "Carros DELETE.bru",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:8080/carros/4",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Carros GET",
+      "filename": "Carros GET.bru",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:8080/carros",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Carros POST",
+      "filename": "Carros POST.bru",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:8080/carros",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"preco\": 75000.50, \n  \"ano\": 2016,\n  \"marca\": \"CRUZE - CHEVROLET\"\n  \n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Carros PUT",
+      "filename": "Carros PUT.bru",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:8080/carros/3",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"preco\": 75020.50, \n  \"ano\": 2015,\n  \"marca\": \"FUSION - FORD\"\n  \n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Carros GET 2",
+      "filename": "Carros GET 2.bru",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:8080/carros/1",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Vendedores GET",
+      "filename": "Vendedores GET.bru",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:8080/vendedores",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Vendedores GET 2",
+      "filename": "Vendedores GET 2.bru",
+      "seq": 7,
+      "request": {
+        "url": "http://localhost:8080/vendedores/3",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Vendedores POST",
+      "filename": "Vendedores POST.bru",
+      "seq": 9,
+      "request": {
+        "url": "http://localhost:8080/vendedores",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"nome\": \"Messi\",\n  \"cpf\": 71723409812\n  \n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Vendedores PUT",
+      "filename": "Vendedores PUT.bru",
+      "seq": 9,
+      "request": {
+        "url": "http://localhost:8080/vendedores/5",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"nome\": \"Messi\",\n  \"cpf\": 12312312312\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Vendedores DELETE",
+      "filename": "Vendedores DELETE.bru",
+      "seq": 10,
+      "request": {
+        "url": "http://localhost:8080/vendedores/6",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Exercicio2-Spring",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.0005884170532226562,
+    "filesCount": 4
+  }
+}

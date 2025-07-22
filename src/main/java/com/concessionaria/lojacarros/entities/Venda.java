@@ -5,6 +5,7 @@ public class Venda {
     private String vendedor;
     private String carro;
 
+
     public Venda(Integer id, String vendedor, String carro) {
         this.id = id;
         this.vendedor = vendedor;

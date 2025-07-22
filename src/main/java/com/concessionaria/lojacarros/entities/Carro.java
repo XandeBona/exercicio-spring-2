@@ -1,10 +1,21 @@
 package com.concessionaria.lojacarros.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Carro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Double preco;
     private Integer ano;
     private String marca;
+
+    public Carro(){
+    }
 
     public Carro(Integer id, Double preco, Integer ano, String marca) {
         this.id = id;
