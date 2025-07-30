@@ -1,5 +1,6 @@
 package com.concessionaria.lojacarros.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -13,7 +14,12 @@ public class Vendedor {
     private String nome;
     private String cpf;
     @OneToMany(mappedBy = "vendedor", cascade = CascadeType.ALL)
+    @JsonIgnore()
     private List<Venda> vendas = new ArrayList<>();
+
+    public Vendedor() {
+
+    }
 
     public Vendedor(Integer id, String nome, String cpf, List<Venda> vendas) {
         this.id = id;
@@ -24,6 +30,10 @@ public class Vendedor {
 
     public List<Venda> getVendas() {
         return vendas;
+    }
+
+    public void setVendas(List<Venda> vendas) {
+        this.vendas = vendas;
     }
 
     public Integer getId() {

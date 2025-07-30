@@ -14,11 +14,9 @@ public class Venda {
     private Date data;
     @ManyToOne()
     @JoinColumn(name = "vendedor_id")
-    @JsonIgnore()
     private Vendedor vendedor;
     @ManyToOne()
     @JoinColumn(name = "carro_id")
-    @JsonIgnore()
     private Carro carro;
 
 

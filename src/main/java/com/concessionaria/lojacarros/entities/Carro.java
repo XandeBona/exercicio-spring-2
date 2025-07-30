@@ -11,6 +11,10 @@ public class Carro {
     private Integer ano;
     private String marca;
 
+    public Carro() {
+
+    }
+
     public Carro(Integer id, Double preco, Integer ano, String marca) {
         this.id = id;
         this.preco = preco;
