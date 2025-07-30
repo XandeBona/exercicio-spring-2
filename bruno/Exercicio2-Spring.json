@@ -7,6 +7,8 @@
       "name": "Carros DELETE",
       "filename": "Carros DELETE.bru",
       "seq": 6,
+      "settings": {},
+      "tags": [],
       "request": {
         "url": "http://localhost:8080/carros/4",
         "method": "DELETE",
@@ -30,9 +32,39 @@
     },
     {
       "type": "http",
+      "name": "Carros GET 2",
+      "filename": "Carros GET 2.bru",
+      "seq": 3,
+      "settings": {},
+      "tags": [],
+      "request": {
+        "url": "http://localhost:8080/carros/1",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
       "name": "Carros GET",
       "filename": "Carros GET.bru",
       "seq": 2,
+      "settings": {},
+      "tags": [],
       "request": {
         "url": "http://localhost:8080/carros",
         "method": "GET",
@@ -59,6 +91,8 @@
       "name": "Carros POST",
       "filename": "Carros POST.bru",
       "seq": 4,
+      "settings": {},
+      "tags": [],
       "request": {
         "url": "http://localhost:8080/carros",
         "method": "POST",
@@ -86,6 +120,8 @@
       "name": "Carros PUT",
       "filename": "Carros PUT.bru",
       "seq": 5,
+      "settings": {},
+      "tags": [],
       "request": {
         "url": "http://localhost:8080/carros/3",
         "method": "PUT",
@@ -110,11 +146,41 @@
     },
     {
       "type": "http",
-      "name": "Carros GET 2",
-      "filename": "Carros GET 2.bru",
-      "seq": 3,
+      "name": "Vendedores DELETE",
+      "filename": "Vendedores DELETE.bru",
+      "seq": 11,
+      "settings": {},
+      "tags": [],
       "request": {
-        "url": "http://localhost:8080/carros/1",
+        "url": "http://localhost:8080/vendedores/6",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Vendedores GET 2",
+      "filename": "Vendedores GET 2.bru",
+      "seq": 8,
+      "settings": {},
+      "tags": [],
+      "request": {
+        "url": "http://localhost:8080/vendedores/3",
         "method": "GET",
         "headers": [],
         "params": [],
@@ -138,35 +204,11 @@
       "type": "http",
       "name": "Vendedores GET",
       "filename": "Vendedores GET.bru",
-      "seq": 6,
+      "seq": 7,
+      "settings": {},
+      "tags": [],
       "request": {
         "url": "http://localhost:8080/vendedores",
-        "method": "GET",
-        "headers": [],
-        "params": [],
-        "body": {
-          "mode": "none",
-          "formUrlEncoded": [],
-          "multipartForm": [],
-          "file": []
-        },
-        "script": {},
-        "vars": {},
-        "assertions": [],
-        "tests": "",
-        "docs": "",
-        "auth": {
-          "mode": "inherit"
-        }
-      }
-    },
-    {
-      "type": "http",
-      "name": "Vendedores GET 2",
-      "filename": "Vendedores GET 2.bru",
-      "seq": 7,
-      "request": {
-        "url": "http://localhost:8080/vendedores/3",
         "method": "GET",
         "headers": [],
         "params": [],
@@ -191,6 +233,8 @@
       "name": "Vendedores POST",
       "filename": "Vendedores POST.bru",
       "seq": 9,
+      "settings": {},
+      "tags": [],
       "request": {
         "url": "http://localhost:8080/vendedores",
         "method": "POST",
@@ -217,7 +261,9 @@
       "type": "http",
       "name": "Vendedores PUT",
       "filename": "Vendedores PUT.bru",
-      "seq": 9,
+      "seq": 10,
+      "settings": {},
+      "tags": [],
       "request": {
         "url": "http://localhost:8080/vendedores/5",
         "method": "PUT",
@@ -242,16 +288,51 @@
     },
     {
       "type": "http",
-      "name": "Vendedores DELETE",
-      "filename": "Vendedores DELETE.bru",
-      "seq": 10,
+      "name": "Vendas GET",
+      "filename": "Vendas GET.bru",
+      "seq": 12,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
       "request": {
-        "url": "http://localhost:8080/vendedores/6",
-        "method": "DELETE",
+        "url": "http://localhost:8080/vendedores/1/vendas",
+        "method": "GET",
         "headers": [],
         "params": [],
         "body": {
           "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Vendas POST",
+      "filename": "Vendas POST.bru",
+      "seq": 14,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "http://localhost:8080/vendedores/2/vendas",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"valor\": 55000.0,\n  \"data\": \"2025-07-30T00:00:00.000+00:00\",\n  \"carro\": {\n    \"id\": 1\n  }\n}",
           "formUrlEncoded": [],
           "multipartForm": [],
           "file": []
